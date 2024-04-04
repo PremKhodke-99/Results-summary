@@ -16,27 +16,23 @@ body {
 }
 
 .wrapper {
-    height: 420px;
-    width: 600px;
-    display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 25px;
+    width: 100vw;
 }
 
 .wrapper .column {
-    width: 50%;
-    height: 100%;
-    padding: 30px 40px;    
+    width: 100%;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
 }
 
 .wrapper #left {
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     justify-content: space-around;
     color: hsl(0, 0%, 100%, 0.9);
     align-items: center;
+    gap: 5px;
 }
 
 .wrapper #left h3 {
@@ -48,17 +44,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 160px;
-    width: 160px;
+    height: 130px;
+    width: 130px;
     border-radius: 50%;
     background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
 
-.wrapper #left .circle h1{
+.wrapper #left .circle h1 {
     font-size: 56px;
 }
 
-.wrapper #left .circle p{
+.wrapper #left .circle p {
     font-size: 14px;
     color: hsl(0, 0%, 100%, 0.5);
 }
@@ -72,14 +68,14 @@ body {
     justify-content: space-around;
 }
 
-.wrapper #right .scores{
+.wrapper #right .scores {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 20px 0;
 }
 
-.wrapper #right .scores div{
+.wrapper #right .scores div {
     display: flex;
     align-items: center;
     padding: 0 7px;
@@ -91,37 +87,85 @@ body {
 
 .wrapper #right .scores div .mark {
     color: hsl(224, 30%, 27%, 0.7);
+    font-weight: 700;
     display: flex;
     justify-content: end;
 }
 
-.wrapper #right .scores div .mark span{
+.wrapper #right .scores div .mark span {
     color: hsl(224, 30%, 27%);
-    font-weight: 700;
 }
 
-.wrapper #right .scores div img{
+.wrapper #right .scores div img {
     margin: 5px;
 }
 
 .wrapper #right .scores .reaction {
     background-color: hsl(0, 100%, 67%, 0.2);
 }
+
 .wrapper #right .scores .memory {
     background-color: hsl(39, 100%, 56%, 0.2);
 }
+
 .wrapper #right .scores .verbal {
     background-color: hsl(166, 100%, 37%, 0.2);
 }
+
 .wrapper #right .scores .visual {
     background-color: hsl(234, 85%, 45%, 0.2);
 }
 
-.wrapper #right button{
+.wrapper #right button {
+    cursor: pointer;
     font-size: 1rem;
     color: hsl(0, 0%, 100%);
     height: 50px;
     width: 100%;
-    background-color: hsl(224, 30%, 27%);
+    background: hsl(224, 30%, 27%);
     border-radius: 25px;
+    border: none;
+}
+
+.wrapper #right button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+
+@media only screen and (min-width: 376px) {
+    .wrapper {
+        height: 420px;
+        width: 600px;
+        display: flex;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 25px;
+    }
+
+    .wrapper .column {
+        width: 50%;
+        height: 100%;
+        padding: 30px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper #left {
+        border-radius: 25px;
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        justify-content: space-around;
+        color: hsl(0, 0%, 100%, 0.9);
+        align-items: center;
+    }
+
+    .wrapper #left .circle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    }
+
 }
